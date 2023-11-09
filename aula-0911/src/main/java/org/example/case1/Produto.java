@@ -6,6 +6,8 @@ public abstract class Produto {
     private String nome;
     private Double precoBase;
 
+    private String fabricante;
+
     public Produto() {}
 
     public Produto(Integer id, String nome, Double precoBase) {
@@ -39,5 +41,13 @@ public abstract class Produto {
 
     public void setPrecoBase(Double precoBase) {
         this.precoBase = precoBase;
+    }
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
     }
 }
