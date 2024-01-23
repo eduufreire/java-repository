@@ -46,7 +46,6 @@ public class Livro extends Produto{
                 "nome='" + nome + '\'' +
                 ", autor='" + autor + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", valorVenda='" + getValorVenda() + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

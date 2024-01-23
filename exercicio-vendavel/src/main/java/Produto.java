@@ -31,7 +31,6 @@ public abstract class Produto implements Vendavel{
         return "Produto{" +
                 "codigo=" + codigo +
                 ", precoCusto=" + precoCusto +
-                ", valorVenda='" + getValorVenda() + '\'' +
                 '}';
     }
 }

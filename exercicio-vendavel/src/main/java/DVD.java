@@ -35,7 +35,6 @@ public class DVD extends Produto{
         return "DVD{" +
                 "nome='" + nome + '\'' +
                 ", gravadora='" + gravadora + '\'' +
-                ", valorVenda='" + getValorVenda() + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

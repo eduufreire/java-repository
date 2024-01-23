@@ -47,4 +47,52 @@ public class Menu {
         carrinho.adicionaVendavel(livro);
     }
 
+    public void adicionarDVD(){
+        System.out.println(">> Iniciando cadastro do DVD");
+
+        System.out.print("Informe o código do DVD:");
+        int codigo = leitorNum.nextInt();
+
+        System.out.print("Informe o Preço de Custo do DVD:");
+        double precoCusto = leitorNum.nextDouble();
+
+        System.out.print("Informe o nome do DVD:");
+        String nome = leitorTxt.next();
+
+        System.out.print("Informe a gravadora do DVD:");
+        String autor = leitorTxt.next();
+
+        DVD dvd = new DVD(codigo, precoCusto, nome, autor);
+        carrinho.adicionaVendavel(dvd);
+    }
+
+    public void adicionarServico(){
+        System.out.println(">> Iniciando cadastro do Serviço");
+
+        System.out.print("Informe o código do serviço:");
+        int codigo = leitorNum.nextInt();
+
+        System.out.print("Informe a descrição do serviço:");
+        String descricao = leitorTxt.next();
+
+        System.out.print("Informe a Quantidade de Horas do Serviço:");
+        int qtdeHoras = leitorNum.nextInt();
+
+        System.out.print("Informe o Valor/Hora do serviço:");
+        double valorHora = leitorNum.nextDouble();
+
+        Servico servico = new Servico(descricao, codigo, qtdeHoras, valorHora);
+        carrinho.adicionaVendavel(servico);
+    }
+
+    public void exibirItensCarrinho(){
+        carrinho.exibeItensCarrinho();
+    }
+
+    public void exibirTotalVendas(){
+        System.out.println(
+                String.format("Total das vendas: %.2f", carrinho.calculaTotalVenda())
+        );
+    }
+
 }
